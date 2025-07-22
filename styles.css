@@ -1,6 +1,14 @@
+html, body {
+  height: 100%;
+}
+
 body {
+  margin: 0px;
   font-family: "Roboto", monospace;
   scroll-behavior: smooth;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .header {
@@ -44,7 +52,7 @@ body {
 .nav-list li a {
   color: #fff;
   text-decoration: none;
-  font-family: 'Roboto', monospace;
+  font-family: "Roboto", monospace;
   transition: color 0.2s;
 }
 
@@ -60,35 +68,44 @@ body {
   color: #e3051a;
 }
 
-
-#logo  {
+#logo {
   width: 2rem;
+  transition: filter 0.2s;
+}
+
+/* Make the logo red on hover of its parent link or li */
+.nav-list li:hover #logo,
+.nav-list li.active #logo {
+  background-color: #e3051a; /* Your preferred red color */
+  display: inline-block;
 }
 
 main {
   max-width: 800px;
+  min-width: 40%;
   margin: 2rem auto;
   padding: 2rem;
   background: #fff;
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  flex: 1 0 auto;
 }
 
 h1 {
-  font-family: 'Rubik Mono One', monospace;
+  font-family: "Rubik Mono One", monospace;
   color: #222;
   margin-bottom: 1rem;
 }
 
 footer {
-  font-family: 'Rubik Mono One', monospace;
+  font-family: "Rubik Mono One", monospace;
   background: #222;
   color: #fff;
   text-align: center;
   text-decoration: solid;
   width: 100%;
-  height: 60px;
   line-height: 60px;
+  flex-shrink: 0;
 }
 
 /* Container to center content at 80% width */
@@ -107,10 +124,10 @@ footer {
 
 /* Flexbox for the articles */
 .container {
-    display: flex;
-    flex-wrap: wrap; /* Allows articles to wrap to a new line */
-    justify-content: space-around; /* Distributes articles evenly */
-    gap: 2rem;
+  display: flex;
+  flex-wrap: wrap; /* Allows articles to wrap to a new line */
+  justify-content: space-around; /* Distributes articles evenly */
+  gap: 2rem;
 }
 
 .project-article {
@@ -118,7 +135,7 @@ footer {
   padding: 2rem;
   background: #f4f4f4;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
@@ -128,7 +145,7 @@ footer {
   background-color: #e3051a; /* Your preferred red color */
   color: #fff; /* White text for contrast */
   text-decoration: none; /* Removes underline from the link */
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   padding: 0.8rem 1.5rem;
   border-radius: 50px; /* Makes the corners perfectly rounded */
   transition: background-color 0.3s ease; /* Adds a smooth transition for hover effect */
@@ -139,6 +156,5 @@ footer {
 .cta-button:hover {
   background-color: #a90412; /* Darker red on hover */
 }
-
 
 /* Only Home Page Specific Styles */
