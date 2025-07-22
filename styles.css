@@ -1,0 +1,144 @@
+body {
+  font-family: "Roboto", monospace;
+}
+
+.header {
+  background: #222;
+  padding: 1.5rem 0;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+}
+
+.nav-list li:hover i {
+  color: #e3051a;
+  cursor: pointer;
+}
+
+.nav-list li:hover a {
+  color: #e3051a;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.nav-list li i {
+  color: #fff;
+  font-size: 0.8em;
+  transition: color 0.2s;
+}
+
+.nav-list li a {
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Roboto', monospace;
+  transition: color 0.2s;
+}
+
+/* Styles for the active navigation link */
+
+.nav-list li.active a {
+  color: #e3051a; /* Your brand's red color for the active link text */
+  text-decoration: underline; /* Add an underline to make it stand out more */
+}
+
+/* Also change the icon color */
+.nav-list li.active i {
+  color: #e3051a;
+}
+
+
+#logo  {
+  width: 2rem;
+}
+
+main {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+h1 {
+  font-family: 'Rubik Mono One', monospace;
+  color: #222;
+  margin-bottom: 1rem;
+}
+
+footer {
+  font-family: 'Rubik Mono One', monospace;
+  background: #222;
+  color: #fff;
+  text-align: center;
+  text-decoration: solid;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+
+/* Container to center content at 80% width */
+.container {
+  max-width: 80%;
+  margin: 0 auto; /* This centers the container horizontally */
+}
+
+/* Styles for the new sections and articles */
+.content-section {
+  padding: 2rem 0; /* Add some vertical spacing */
+  display: flex;
+  flex-direction: column; /* Stacks articles vertically on smaller screens */
+  gap: 2rem;
+}
+
+/* Flexbox for the articles */
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Allows articles to wrap to a new line */
+    justify-content: space-around; /* Distributes articles evenly */
+    gap: 2rem;
+}
+
+.project-article {
+  flex-basis: calc(50% - 1rem); /* Each article takes up about half the space */
+  padding: 2rem;
+  background: #f4f4f4;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+/* Style the Call-to-Action (CTA) buttons */
+.cta-button {
+  display: inline-block; /* Makes it a block-level element that respects padding/margin */
+  background-color: #e3051a; /* Your preferred red color */
+  color: #fff; /* White text for contrast */
+  text-decoration: none; /* Removes underline from the link */
+  font-family: 'Roboto', sans-serif;
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px; /* Makes the corners perfectly rounded */
+  transition: background-color 0.3s ease; /* Adds a smooth transition for hover effect */
+  margin-top: 1rem;
+  font-weight: 500;
+}
+
+.cta-button:hover {
+  background-color: #a90412; /* Darker red on hover */
+}
+
+
+/* Only Home Page Specific Styles */
