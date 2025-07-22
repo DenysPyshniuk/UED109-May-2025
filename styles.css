@@ -1,5 +1,6 @@
 body {
   font-family: "Roboto", monospace;
+  scroll-behavior: smooth;
 }
 
 .header {
@@ -85,10 +86,9 @@ footer {
   color: #fff;
   text-align: center;
   text-decoration: solid;
-  position: fixed;
   width: 100%;
-  bottom: 0;
-  left: 0;
+  height: 60px;
+  line-height: 60px;
 }
 
 /* Container to center content at 80% width */
