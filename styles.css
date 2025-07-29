@@ -1,21 +1,53 @@
-html, body {
-  height: 100%;
+/*Reset css*/
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
 }
 
+/******** common *******/
 body {
   margin: 0px;
-  font-family: "Roboto", monospace;
   scroll-behavior: smooth;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  font-family: Effra, Verdana, Arial sans-serif;
 }
 
+/* header */
 .header {
-  background: #222;
+  background: #000;
   padding: 1.5rem 0;
 }
-
 .nav-list {
   display: flex;
   justify-content: center;
@@ -24,50 +56,41 @@ body {
   margin: 0;
   padding: 0;
 }
-
 .nav-list li {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.2rem;
 }
-
 .nav-list li:hover i {
   color: #e3051a;
   cursor: pointer;
 }
-
 .nav-list li:hover a {
   color: #e3051a;
   text-decoration: underline;
   cursor: pointer;
 }
-
 .nav-list li i {
   color: #fff;
   font-size: 0.8em;
   transition: color 0.2s;
 }
-
 .nav-list li a {
   color: #fff;
   text-decoration: none;
-  font-family: "Roboto", monospace;
   transition: color 0.2s;
 }
 
 /* Styles for the active navigation link */
-
 .nav-list li.active a {
   color: #e3051a; /* Your brand's red color for the active link text */
   text-decoration: underline; /* Add an underline to make it stand out more */
 }
-
 /* Also change the icon color */
 .nav-list li.active i {
   color: #e3051a;
 }
-
 #logo {
   width: 2rem;
   transition: filter 0.2s;
@@ -81,8 +104,7 @@ body {
 }
 
 main {
-  max-width: 800px;
-  min-width: 40%;
+  width: 80%;
   margin: 2rem auto;
   padding: 2rem;
   background: #fff;
@@ -91,28 +113,14 @@ main {
   flex: 1 0 auto;
 }
 
-h1 {
-  font-family: "Rubik Mono One", monospace;
-  color: #222;
-  margin-bottom: 1rem;
-}
-
-footer {
-  padding-bottom: 2rem;
-  font-family: "Rubik Mono One", monospace;
-  background: #222;
-  color: #fff;
-  text-align: center;
-  text-decoration: solid;
-  width: 100%;
-  line-height: 60px;
-  flex-shrink: 0;
-}
-
 /* Container to center content at 80% width */
 .container {
   max-width: 80%;
   margin: 0 auto; /* This centers the container horizontally */
+  display: flex;
+  flex-wrap: wrap; /* Allows articles to wrap to a new line */
+  justify-content: space-around; /* Distributes articles evenly */
+  gap: 2rem;
 }
 
 /* Styles for the new sections and articles */
@@ -120,14 +128,6 @@ footer {
   padding: 2rem 0; /* Add some vertical spacing */
   display: flex;
   flex-direction: column; /* Stacks articles vertically on smaller screens */
-  gap: 2rem;
-}
-
-/* Flexbox for the articles */
-.container {
-  display: flex;
-  flex-wrap: wrap; /* Allows articles to wrap to a new line */
-  justify-content: space-around; /* Distributes articles evenly */
   gap: 2rem;
 }
 
@@ -146,7 +146,6 @@ footer {
   background-color: #e3051a; /* Your preferred red color */
   color: #fff; /* White text for contrast */
   text-decoration: none; /* Removes underline from the link */
-  font-family: "Roboto", sans-serif;
   padding: 0.8rem 1.5rem;
   border-radius: 50px; /* Makes the corners perfectly rounded */
   transition: background-color 0.3s ease; /* Adds a smooth transition for hover effect */
@@ -158,6 +157,89 @@ footer {
   background-color: #a90412; /* Darker red on hover */
 }
 
+/* footer */
+footer {
+  width: 100%;
+  padding: 24px 0px;
+  background: #000;
+  color: #fff;
+  text-align: center;
+  text-decoration: solid;
+  line-height: 60px;
+  flex-shrink: 0;
+}
+
+/******** toppage *******/
+/* common */
+.content-section h3 {
+  font-size: 24px;
+  color: #56255c;
+}
+/* hero */
+.top .hero {
+  padding: 12rem 0;
+  text-align: center;
+  background-image: url(./public/images/home/ccbt-banner-1.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.top .hero h1 {
+  font-size: 72px;
+  color: #fff;
+  font-weight: bold;
+}
+.top .hero p {
+  color: #fff;
+}
+/* contents */
+h2 {
+  padding-bottom: 8px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #56255c;
+  text-align: center;
+}
+h2:after {
+  content: "";
+  display: block;
+  width: 160px;
+  margin: 0 auto;
+  background-color: #56255c;
+  height: 8px;
+}
+.about {
+  margin-bottom: 96px;
+  background: #f1eef1;
+}
+
+/* contents */
+.contents ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.contents li {
+  width: 364px;
+  margin: 0 24px 48px 0;
+}
+.contents li div {
+  text-align: right;
+}
+.contents li div i {
+  margin-right: 8px;
+  color: #e3051a;
+}
+.contents li div a {
+  color: #e3051a;
+}
+.contents li a:hover {
+  color: #a90412;
+  transition: color 0.2s;
+  text-decoration: underline;
+}
+
 /* Responsive Design */
 @media (max-width: 900px) {
   main {
@@ -166,12 +248,14 @@ footer {
   }
   .container {
     flex-direction: column;
-    align-items: stretch;
+    align-items: center;
+    justify-content: center;
     gap: 1rem;
   }
   .project-article {
     flex-basis: 100%;
     padding: 1rem;
+    width: 80%;
   }
 }
 
@@ -204,7 +288,7 @@ footer {
 
   p {
     text-align: center;
-  };
+  }
   footer {
     font-size: 0.9rem;
     line-height: 2.5rem;
@@ -215,5 +299,3 @@ footer {
     font-size: 1em;
   }
 }
-
-/* Only Home Page Specific Styles */
