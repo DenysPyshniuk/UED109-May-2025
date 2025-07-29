@@ -1,0 +1,58 @@
+.texto-header h1, .texto-header p {
+    text-align: center;
+    background-color: rgba (0,0,0,0.5);
+    padding: 20px 40px;
+    border-radius: 10px;
+    color: white;
+}
+
+.hero-image {
+    background-image: url(../public/images/tools-and-platforms/close-up-man-writing-code-laptop.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.h1-text {
+    margin: 0;
+    font-size: 72px;
+    margin: 0px;
+}
+
+body {
+    font-family: Effra, Verdana, Arial, sans-serif;
+}
+
+.text-intro{
+    background-color: #F1EEF1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px 150px 10px 150px;
+}
+
+.tools {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.tools-col {
+    background-color: wheat;
+    border: 1px solid red;
+    padding: 10px;
+    margin: 10px;
+}
+
+footer {
+    background-color: black;
+    color: white;
+}
