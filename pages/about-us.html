@@ -1,75 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Mono+One&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="../styles.css" />
-    <link rel="stylesheet" href="../styles/about-us.css" />
-    <script
-      src="https://kit.fontawesome.com/40f648f832.js"
-      crossorigin="anonymous"
-    ></script>
-    <title>About us</title>
-  </head>
-  <body>
-    <header id="header" class="header">
-      <nav id="nav">
-        <ul class="nav-list">
-          <li>
-            <a href="../index.html">
-              <img id="logo" src="../public/images/cctb_logo_2_mono.svg" alt="Our final project homepage">
-            </a>
-          </li>
-          <li class="active">
-            <i class="fa-solid fa-chevron-right"></i>
-            <a href="../pages/about-us.html">About us</a>
-          </li>
-          <li>
-            <i class="fa-solid fa-chevron-right"></i>
-            <a href="../pages/tools-and-platforms.html">Tools & Platforms</a>
-          </li>
-          <li>
-            <i class="fa-solid fa-chevron-right"></i>
-            <a href="../pages/what-we-have-learned.html">What we have learned</a>
-          </li>
-          <li>
-            <i class="fa-solid fa-chevron-right"></i>
-            <a href="../pages/our-class.html">Our Class</a>
-          </li>
-          <li>
-            <i class="fa-solid fa-chevron-right"></i>
-            <a href="../pages/project.html">Project</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
 
-    <main>
-      <h1 id="about-us-title">About Us Page</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Mono+One&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../styles/about-us.css" />
+  <script src="https://kit.fontawesome.com/40f648f832.js" crossorigin="anonymous"></script>
+  <title>About us</title>
+</head>
 
-      <article id="about-us-content">
-        <h2>Meet the Team</h2>
-        <ul>
-          <li><strong>Ayuko:</strong> CEO</li>
-          <li><strong>Shiori:</strong> Frontend Developer</li>
-          <li><strong>Rifat:</strong> Backend Developer</li>
-          <li><strong>Joao:</strong> Project Manager</li>
-          <li><strong>Daniela:</strong> UI/UX Designer</li>
-          <li><strong>Paula:</strong> Content Writer</li>
-        </ul>
+<body>
+  <header id="header" class="header">
+    <nav id="nav">
+      <ul class="nav-list">
+        <li>
+          <a href="/index.html">
+            <img id="logo" src="./public/images/cctb_logo_2_mono.svg" alt="Our final project homepage">
+          </a>
+        </li>
+        <li class="active">
+          <i class="fa-solid fa-chevron-right"></i>
+          <a href="./pages/about-us.html">About us</a>
+        </li>
+        <li>
+          <i class="fa-solid fa-chevron-right"></i>
+          <a href="./pages/tools-and-platforms.html">Tools & Platforms</a>
+        </li>
+        <li>
+          <i class="fa-solid fa-chevron-right"></i>
+          <a href="./pages/what-we-have-learned.html">What we have learned</a>
+        </li>
+        <li>
+          <i class="fa-solid fa-chevron-right"></i>
+          <a href="./pages/our-class.html">Our Class</a>
+        </li>
+        <li>
+          <i class="fa-solid fa-chevron-right"></i>
+          <a href="./pages/project.html">Project</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
 
-        <p>This project is a collaborative effort to create a comprehensive website that showcases our skills and learning journey.</p>
-      </article>
+  <main>
+    <div class="hero-image">
+      <h1 id="About-us-title">Our College</h1>
+      <section class="hero">
+    </div>
+    <div class="hero-content">
+      <p>Embrace the opportunity to study IT, hospitality and business and gain work experience in Vancouver at CCTB
+      </p>
+    </div>
+    <section>
+      <div class="breadcrumb">
+        <span class="icon"><i class="fa-solid fa-house"></i>/ about Us</span>
+      </div>
 
-      <p>Paula is working on it</p>
-    </main>
+      <section class="about-video">
+        <div>
+          <div class="text-and-video">
+            <div class="about-text">
+              <p>
+                At the Canadian College of Technology and Business (CCTB), your success is our goal. Through our range
+                of IT, hospitality and business-focused programs, we provide our students with the highest quality
+                training, preparing them for a rewarding career in an increasingly digitalized world.
+              </p>
+            </div>
+            <div class="video-box">
+              <iframe id="cctb-video" src="https://www.youtube.com/embed/SSKJcqFl9Ug?si=7lisrK05BQF_B-Fr"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+          </div>
 
-    <footer>
-      <p>&copy; 2025 Our Final Project</p>
-    </footer>
-  </body>
+
+          <!--ACCORDIONS-->
+          <section class="accordion-section">
+            <button class="accordion">Our Program Portfolio</button>
+            <div class="panel">
+              <p>Details about programs...</p>
+            </div>
+
+            <button class="accordion">Career Orientation</button>
+            <div class="panel">
+              <p>Details about career orientation</p>
+            </div>
+
+            <button class="accordion">Community Contribution</button>
+            <di class="panel">
+              <p>Details about community involvement...</p>
+        </div>
+
+        <section class="form-section">
+          <h2>Fill out the form below and we will be in touch shortly</h2>
+          <form>
+            <div>
+              <label for="name">Name</label>
+              <input id="name" type="text" placeholder="Type your name">
+            </div>
+
+            <div>
+              <label for="last-name">Last name</label>
+              <input id="last-name" type="text" placeholder="Type your last name">
+            </div>
+
+
+          </form>
+
+
+
+        </section>
+
+
+      </section>
+
+    </section>
+
+
+
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Our Final Project</p>
+  </footer>
+</body>
+
 </html>
