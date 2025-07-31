@@ -1,6 +1,98 @@
-#about-us-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 2rem;
+.text-and-video{
+    display: flex;
+    flex-direction: row;
+}
+
+#cctb-video{
+    width: 430px;
+    height: 250px;
+}
+.text-and-video{
+    padding: 30px 30px 30px 0px;
+    border-radius: 20px;
+    gap: 1rem;
+}
+#About-us-title {
+  color: white;
+}
+
+.breadcrumb {
+    background-color: purple;
+    color: white;
+    width: fit-content;
+    padding: 10px;
+}
+
+.hero-image {
+    background-image: url(https://tse2.mm.bing.net/th/id/OIP.q4szoZ1mx38WDOmL1rABuwHaE8?w=1920&h=1280&rs=1&pid=ImgDetMain&o=7&rm=3);
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.h1 {
+    color: white;
+}
+
+.privacy-form {
+  max-width: 600px;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.privacy-form p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.form-group {
+  margin: 15px 0;
+}
+
+.form-group input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+button[type="submit"] {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+ background-color: purple;
+}
+.form-section {
+  background-color: #f5f5f5; /* Light gray background */
+  padding: 20px;
+  border-bottom: 1px solid #ccc; /* Light black/gray stroke line */
+  border-radius: 5px; /* Optional: rounded corners */
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.form-section div {
+  margin-bottom: 15px;
+}
+
+.form-section label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-section input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
