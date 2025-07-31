@@ -1,58 +1,122 @@
-.texto-header h1, .texto-header p {
-    text-align: center;
-    background-color: rgba (0,0,0,0.5);
-    padding: 20px 40px;
-    border-radius: 10px;
-    color: white;
+.texto-header h1,
+.texto-header p {
+  text-align: center;
+  background-color: rgba (0, 0, 0, 0.5);
+  padding: 20px 40px;
+  border-radius: 10px;
+  color: white;
 }
 
 .hero-image {
-    background-image: url(../public/images/tools-and-platforms/close-up-man-writing-code-laptop.jpg);
-    background-size: cover;
-    background-position: center;
-    height: 400px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  background-image: url(../public/images/close-up-man-writing-code-laptop.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .h1-text {
-    margin: 0;
-    font-size: 72px;
-    margin: 0px;
+  margin: 0;
+  font-size: 72px;
+  margin: 0px;
 }
 
 body {
-    font-family: Effra, Verdana, Arial, sans-serif;
+  font-family: Effra, Verdana, Arial, sans-serif;
 }
 
-.text-intro{
-    background-color: #F1EEF1;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 10px 150px 10px 150px;
+.text-intro {
+  background-color: #f1eef1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10px 20px 10px 20px;
+  line-height: 1;
 }
 
 .tools {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    gap: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 3rem;
+  padding-right: 40px;
+  padding-left: 40px;
+  padding-bottom: 80px;
 }
 
 .tools-col {
-    background-color: wheat;
-    border: 1px solid red;
-    padding: 10px;
-    margin: 10px;
+  width: 50%;
+  padding: 10px;
+  margin: 10px;
+  box-sizing: border-box;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: 1;
 }
 
 footer {
-    background-color: black;
-    color: white;
+  background-color: black;
+  color: white;
+}
+
+.middle-tit {
+  color: #56255c;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+h5 {
+  color: #56255c;
+  font-size: 32px;
+  margin: 20px;
+  font-weight: 500;
+}
+
+.ima-col {
+  height: 200px;
+}
+
+.ima-col1 {
+  height: 90px;
+}
+
+h4 {
+  color: #e3051a;
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+h2:after {
+  content: "";
+  display: block;
+  width: 160px;
+  margin: 0 auto;
+  background-color: none !important;
+  height: 8px;
+}
+
+p {
+  font-size: 20px;
+  font-weight: 400;
+  margin: 20px;
+}
+
+main {
+  width: 80%;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  flex: 1 0 auto;
 }
