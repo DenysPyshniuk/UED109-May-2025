@@ -18,29 +18,29 @@
     <nav id="nav">
       <ul class="nav-list">
         <li>
-          <a href="../index.html">
-            <img id="logo" src="../public/images/cctb_logo_2_mono.svg" alt="Our final project homepage">
+          <a href="/index.html">
+            <img id="logo" src="./public/images/cctb_logo_2_mono.svg" alt="Our final project homepage">
           </a>
         </li>
         <li class="active">
           <i class="fa-solid fa-chevron-right"></i>
-          <a href="../pages/about-us.html">About us</a>
+          <a href="./pages/about-us.html">About us</a>
         </li>
         <li>
           <i class="fa-solid fa-chevron-right"></i>
-          <a href="../pages/tools-and-platforms.html">Tools & Platforms</a>
+          <a href="./pages/tools-and-platforms.html">Tools & Platforms</a>
         </li>
         <li>
           <i class="fa-solid fa-chevron-right"></i>
-          <a href="../pages/what-we-have-learned.html">What we have learned</a>
+          <a href="./pages/what-we-have-learned.html">What we have learned</a>
         </li>
         <li>
           <i class="fa-solid fa-chevron-right"></i>
-          <a href="../pages/our-class.html">Our Class</a>
+          <a href="./pages/our-class.html">Our Class</a>
         </li>
         <li>
           <i class="fa-solid fa-chevron-right"></i>
-          <a href="../pages/project.html">Project</a>
+          <a href="./pages/project.html">Project</a>
         </li>
       </ul>
     </nav>
@@ -83,31 +83,76 @@
           <section class="accordion-section">
             <button class="accordion">Our Program Portfolio</button>
             <div class="panel">
-              <p>Details about programs...</p>
             </div>
 
             <button class="accordion">Career Orientation</button>
             <div class="panel">
-              <p>Details about career orientation</p>
             </div>
 
             <button class="accordion">Community Contribution</button>
             <di class="panel">
-              <p>Details about community involvement...</p>
         </div>
+
 
         <section class="form-section">
           <h2>Fill out the form below and we will be in touch shortly</h2>
           <form>
-            <div>
-              <label for="name">Name</label>
-              <input id="name" type="text" placeholder="Type your name">
+            <div class="form-section">
+              <div>
+                <label for="name">Name*</label>
+                <input id="name" type="text" placeholder="Type your name">
+              </div>
+
+              <div>
+                <label for="last-name">Last name*</label>
+                <input id="last-name" type="text" placeholder="Type your last name">
+              </div>
+
+              <div>
+                <label for="phone-number">Phone number*</label>
+                <input id="phone-number" type="text" placeholder="Type your number">
+              </div>
+
+              <div>
+                <label for="program">Program*</label>
+                <input id="program" type="text" placeholder="Program of interest">
+              </div>
             </div>
 
-            <div>
-              <label for="last-name">Last name</label>
-              <input id="last-name" type="text" placeholder="Type your last name">
-            </div>
+
+            <form class="privacy-form">
+              <p>
+                Canadian College of Technology and Business is a part of the Global University Systems group of
+                companies (the GUS Group).
+                The information you provide on this form will be processed in accordance with Canadian College of
+                Technology and Business’
+                <a href="#">Privacy Policy</a>. Canadian College of Technology and Business will use the details
+                provided by you to get in
+                touch with you about your inquiry.
+              </p>
+
+              <div class="form-group">
+                <input type="checkbox" id="consent-info" name="consent-info" required>
+                <label for="consent-info">
+                  I consent to receiving information (by email, phone or text/SMS) about the courses and services
+                  offered by
+                  Canadian College of Technology and Business and from other institutions in the GUS Group.
+                </label>
+              </div>
+
+              <div class="form-group">
+                <input type="checkbox" id="consent-whatsapp" name="consent-whatsapp" required>
+                <label for="consent-whatsapp">
+                  I would like to receive WhatsApp updates specific to my program of interest, application status and
+                  approaching deadlines
+                  from Canadian College of Technology and Business.
+                </label>
+              </div>
+
+              <p>You can unsubscribe at any time using links provided in any communication we send.</p>
+
+              <button type="submit">Submit</button>
+            </form>
 
 
           </form>
