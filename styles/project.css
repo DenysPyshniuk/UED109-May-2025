@@ -1,11 +1,11 @@
 article {
   background-color: #f1eef190;
-  margin-left: 10%;
-  padding: 20px;
-  width: 70%;
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto 5%;
+  padding: 30px;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  margin-bottom: 5%;
   text-align: center;
 }
 
@@ -13,11 +13,15 @@ h3 {
   text-align: center;
   color: #56255c;
   font-size: 32px;
+  margin-bottom: 20px;
 }
 
 .project-showcase {
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
   justify-content: center;
+  padding: 20px 0;
 }
 
 .cta-button {
@@ -29,18 +33,66 @@ h3 {
   padding: 0.8rem 1.5rem;
   border-radius: 50px;
   transition: background-color 0.3s ease;
-  margin-top: 10%;
+  margin-top: 30px;
   font-weight: 500;
 }
 
-.midterm-image {
-  alignment-baseline: central;
-  width: 100%;
-  height: 100%;
+.cta-button:hover {
+  background-color: #3d1a43;
 }
 
+.midterm-image,
 .semantic-image {
-  alignment-baseline: central;
   width: 100%;
-  height: 100%;
+  height: auto;
+  max-width: 600px;
+  border-radius: 8px;
+  margin: 0 auto;
+}
+
+/* Project Page Responsive Styles */
+@media (max-width: 900px) {
+  article {
+    width: 90%;
+    padding: 25px;
+  }
+
+  h3 {
+    font-size: 28px;
+  }
+
+  .project-showcase {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  article {
+    width: 95%;
+    padding: 20px 15px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+  }
+
+  h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+
+  .project-showcase {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 10px 0;
+  }
+
+  .cta-button {
+    padding: 0.6rem 1.2rem;
+    margin-top: 20px;
+    font-size: 0.9em;
+  }
+
+  .midterm-image,
+  .semantic-image {
+    border-radius: 4px;
+  }
 }
