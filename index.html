@@ -1,170 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <script
-      src="https://kit.fontawesome.com/40f648f832.js"
-      crossorigin="anonymous"
-    ></script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Mono+One&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="https://use.typekit.net/ehf4ncg.css" />
-    <link rel="stylesheet" href="./styles.css" />
-    <title>Our final project</title>
-  </head>
-  <body>
-    <input type="checkbox" id="headerToggle" class="header-toggle-checkbox">
-    <label for="headerToggle" class="header-toggle" aria-label="Toggle header"></label>
-    <header id="header" class="header">
-      <nav id="nav">
-        <ul class="nav-list">
-          <li class="active">
-            <a href="./index.html">
-              <img
-                id="logo"
-                src="./public/images/cctb_logo_2_mono.svg"
-                alt="Our final project homepage"
-              />
-            </a>
-          </li>
-          <li>
-            <i class="fa-solid fa-chevron-right"></i>
-            <a href="./pages/about-us.html">About us</a>
-          </li>
-          <li>
-            <i class="fa-solid fa-chevron-right"></i>
-            <a href="./pages/tools-and-platforms.html">Tools & Platforms</a>
-          </li>
-          <li>
-            <i class="fa-solid fa-chevron-right"></i>
-            <a href="./pages/what-we-have-learned.html">What we have learned</a>
-          </li>
-          <li>
-            <i class="fa-solid fa-chevron-right"></i>
-            <a href="./pages/our-class.html">Our Class</a>
-          </li>
-          <li>
-            <i class="fa-solid fa-chevron-right"></i>
-            <a href="./pages/project.html">Projects</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/40f648f832.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://use.typekit.net/ehf4ncg.css">
+  <link rel="stylesheet" href="./styles.css">
+  <title>Our Final Project</title>
+</head>
+<body>
+  <input type="checkbox" id="headerToggle" class="header-toggle-checkbox">
+  <label for="headerToggle" class="header-toggle" aria-label="Toggle header"></label>
 
-    <main class="top">
-      <div class="main-image">
-        <div class="main-text">
-          <h1>Welcome to Our Final Project</h1>
-          <p class="main-p">A showcase of our web development journey</p>
-        </div>
+  <header class="header">
+    <nav>
+      <ul class="nav-list">
+        <li class="active">
+          <a href="./index.html">
+            <img src="./public/images/cctb_logo_2_mono.svg" alt="Homepage" id="logo">
+          </a>
+        </li>
+        <li>
+          <i class="fa-solid fa-chevron-right"></i>
+          <a href="./pages/about-us.html">About Us</a>
+        </li>
+        <li>
+          <i class="fa-solid fa-chevron-right"></i>
+          <a href="./pages/tools-and-platforms.html">Tools & Platforms</a>
+        </li>
+        <li>
+          <i class="fa-solid fa-chevron-right"></i>
+          <a href="./pages/what-we-have-learned.html">What We Have Learned</a>
+        </li>
+        <li>
+          <i class="fa-solid fa-chevron-right"></i>
+          <a href="./pages/our-class.html">Our Class</a>
+        </li>
+        <li>
+          <i class="fa-solid fa-chevron-right"></i>
+          <a href="./pages/project.html">Projects</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="main-image">
+      <div class="main-text">
+        <h1>Welcome to Our Final Project</h1>
+        <p>A showcase of our web development journey</p>
       </div>
+    </div>
 
-      <div class="intro">
-        <p>We are a group of students passionate about web development. This project is a showcase of the skills we have learned throughout the course, demonstrating our ability to create responsive, modern websites using HTML and CSS.</p>
+    <div class="intro">
+      <p>We are a group of students passionate about web development. This project showcases the skills we have learned throughout the course, demonstrating our ability to create responsive, modern websites using HTML and CSS.</p>
+    </div>
+
+    <section class="content-section about">
+      <h2>What's CCTB-UIUX Design Course?</h2>
+      <div class="container">
+        <article class="project-article">
+          <h3>Our Team</h3>
+          <img src="./public/images/home/my-project-4.jpeg" alt="Our team">
+          <p>We are a group of students passionate about web development. This project showcases the skills we have learned throughout the course.</p>
+          <a href="./pages/about-us.html" class="cta-button">Read More About Us</a>
+        </article>
+        <article class="project-article">
+          <h3>Our Tech Stack</h3>
+          <img src="./public/images/home/my-project-5.jpeg" alt="Our tech stack">
+          <p>For this project, we focused on mastering the fundamentals of HTML and CSS, demonstrating how to build a fully functional website without relying on complex JavaScript frameworks.</p>
+          <a href="./pages/tools-and-platforms.html" class="cta-button">See Our Tools</a>
+        </article>
       </div>
+    </section>
 
-      <section class="content-section about">
-        <h2>What`s CCTB-UIUX Design course?</h2>
-        <div class="container">
-          <article class="project-article">
-            <h3>Our team</h3>
-            <img src="./public/images/home/my-project-4.jpeg" alt="test" />
-            <p>
-              We are a group of students passionate about web development. This
-              project is a showcase of the skills we have learned throughout the
-              course.
-            </p>
-            <a href="./pages/about-us.html" class="cta-button"
-              >Read more about us</a
-            >
-          </article>
-          <article class="project-article">
-            <h3>Our Tech Stack</h3>
-            <img src="./public/images/home/my-project-5.jpeg" alt="test" />
-            <p>
-              For this project, we focused on mastering the fundamentals of HTML
-              and CSS, demonstrating how to build a fully functional website
-              without relying on complex JavaScript frameworks.
-            </p>
-            <a href="./pages/tools-and-platforms.html" class="cta-button"
-              >See Our Tools</a
-            >
-          </article>
-        </div>
-      </section>
+    <section class="content-section contents">
+      <h2>Contents</h2>
+      <ul>
+        <li>
+          <img src="./public/images/home/campus-gallery-10.png" alt="About us">
+          <h3>About Us</h3>
+          <p>Learn more about our team and the journey we've taken in this web development course.</p>
+          <div>
+            <i class="fa-solid fa-chevron-right"></i>
+            <a href="./pages/about-us.html">Read More</a>
+          </div>
+        </li>
+        <li>
+          <img src="./public/images/home/Tool & Platforms.png" alt="Tools and platforms">
+          <h3>Tools & Platforms</h3>
+          <p>Discover the technologies and tools we've used to create this project and develop our skills.</p>
+          <div>
+            <i class="fa-solid fa-chevron-right"></i>
+            <a href="./pages/tools-and-platforms.html">Read More</a>
+          </div>
+        </li>
+        <li>
+          <img src="./public/images/home/Our Class.png" alt="Our class">
+          <h3>Our Class</h3>
+          <p>Meet our classmates and see the collaborative environment that helped us grow as developers.</p>
+          <div>
+            <i class="fa-solid fa-chevron-right"></i>
+            <a href="./pages/our-class.html">Read More</a>
+          </div>
+        </li>
+        <li>
+          <img src="./public/images/home/What we have learnd.png" alt="What we have learned">
+          <h3>What We Have Learned</h3>
+          <p>Explore the key concepts and skills we've acquired throughout this web development journey.</p>
+          <div>
+            <i class="fa-solid fa-chevron-right"></i>
+            <a href="./pages/what-we-have-learned.html">Read More</a>
+          </div>
+        </li>
+        <li>
+          <img src="./public/images/home/Projects.png" alt="Projects">
+          <h3>Projects</h3>
+          <p>View our completed projects and see how we've applied our learning to create real websites.</p>
+          <div>
+            <i class="fa-solid fa-chevron-right"></i>
+            <a href="./pages/project.html">Read More</a>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </main>
 
-      <section class="content-section contents">
-        <h2>Contents</h2>
-        <ul>
-          <li>
-            <img src="./public/images/home/campus-gallery-10.png" alt="cctb" />
-            <h3>About us</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae minima amet provident accusantium architecto animi quod blanditiis vel voluptates, atque eveniet ut corrupti ipsum obcaecati consectetur itaque numquam vitae. Possimus.
-            </p>
-            <div>
-              <i class="fa-solid fa-chevron-right"></i
-              ><a href="/pages/about-us.html">Read more</a>
-            </div>
-          </li>
-          <li>
-            <img src="./public/images/home/Tool & Platforms.png" alt="cctb" />
-            <h3>Tool & Platforms</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta dignissimos fugit animi rerum, ducimus eum reprehenderit reiciendis facilis sed sunt in quos aperiam perferendis nostrum dolores doloribus possimus adipisci fuga?
-            </p>
-            <div>
-              <i class="fa-solid fa-chevron-right"></i
-              ><a href="./pages/tools-and-platforms.html">Read more</a>
-            </div>
-          </li>
-          <li>
-            <img src="./public/images/home/Our Class.png" alt="cctb" />
-            <h3>Our Class</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi harum omnis eos libero dignissimos a sunt quibusdam laudantium ipsam, neque, sint porro? Commodi praesentium facilis magni unde aliquid quam libero?
-            </p>
-            <div>
-              <i class="fa-solid fa-chevron-right"></i
-              ><a href="./pages/our-class.html">Read more</a>
-            </div>
-          </li>
-          <li>
-            <img
-              src="./public/images/home/What we have learnd.png"
-              alt="cctb"
-            />
-            <h3>What we have learnd</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis dolorum provident pariatur aut obcaecati sequi nisi dolore qui. Tenetur blanditiis eaque, saepe adipisci architecto necessitatibus reprehenderit molestiae maiores natus et?
-            </p>
-            <div>
-              <i class="fa-solid fa-chevron-right"></i
-              ><a href="./pages/what-we-have-learned.html">Read more</a>
-            </div>
-          </li>
-          <li>
-            <img src="./public/images/home/Projects.png" alt="cctb" />
-            <h3>Project</h3>
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio amet enim ab laborum laboriosam voluptates praesentium id accusamus sapiente accusantium sint, nulla ducimus pariatur excepturi saepe architecto sit est illo.
-            </p>
-            <div>
-              <i class="fa-solid fa-chevron-right"></i
-              ><a href="./pages/project.html">Read more</a>
-            </div>
-          </li>
-        </ul>
-      </section>
-    </main>
-
-    <footer>
-      <p>&copy; 2025 Our Final Project</p>
-    </footer>
-  </body>
+  <footer>
+    <p>&copy; 2025 Our Final Project</p>
+  </footer>
+</body>
 </html>

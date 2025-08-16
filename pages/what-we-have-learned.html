@@ -1,169 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Mono+One&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="../styles.css"/>
-    <link rel="stylesheet" href="../styles/what-we-have-learned.css" />
-    <script
-      src="https://kit.fontawesome.com/40f648f832.js"
-      crossorigin="anonymous"
-    ></script>
-    <title>What we have learned</title>
-  </head>
-  <body>
-    <input type="checkbox" id="headerToggle" class="header-toggle-checkbox">
-    <label for="headerToggle" class="header-toggle" aria-label="Toggle header"></label>
-    <header id="header" class="header">
-      <nav id="nav">
-        <ul class="nav-list">
-          <li>
-            <a href="../index.html">
-              <img id="logo" src="../public/images/cctb_logo_2_mono.svg" alt="Our final project homepage">
-            </a>
-          </li>
-          <li>
-            <i class="fa-solid fa-chevron-right"></i>
-            <a href="./about-us.html">About us</a>
-          </li>
-          <li>
-            <i class="fa-solid fa-chevron-right"></i>
-            <a href="./tools-and-platforms.html">Tools & Platforms</a>
-          </li>
-          <li class="active">
-            <i class="fa-solid fa-chevron-right"></i>
-            <a href="./what-we-have-learned.html">What we have learned</a>
-          </li>
-          <li>
-            <i class="fa-solid fa-chevron-right"></i>
-            <a href="./our-class.html">Our Class</a>
-          </li>
-          <li>
-            <i class="fa-solid fa-chevron-right"></i>
-            <a href="./project.html">Project</a>
-          </li>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../styles/what-we-have-learned.css">
+  <script src="https://kit.fontawesome.com/40f648f832.js" crossorigin="anonymous"></script>
+  <title>What We Have Learned</title>
+</head>
+<body>
+  <input type="checkbox" id="headerToggle" class="header-toggle-checkbox">
+  <label for="headerToggle" class="header-toggle" aria-label="Toggle header"></label>
+
+  <header class="header">
+    <nav>
+      <ul class="nav-list">
+        <li>
+          <a href="../index.html">
+            <img src="../public/images/cctb_logo_2_mono.svg" alt="Homepage" id="logo">
+          </a>
+        </li>
+        <li>
+          <i class="fa-solid fa-chevron-right"></i>
+          <a href="./about-us.html">About Us</a>
+        </li>
+        <li>
+          <i class="fa-solid fa-chevron-right"></i>
+          <a href="./tools-and-platforms.html">Tools & Platforms</a>
+        </li>
+        <li class="active">
+          <i class="fa-solid fa-chevron-right"></i>
+          <a href="./what-we-have-learned.html">What We Have Learned</a>
+        </li>
+        <li>
+          <i class="fa-solid fa-chevron-right"></i>
+          <a href="./our-class.html">Our Class</a>
+        </li>
+        <li>
+          <i class="fa-solid fa-chevron-right"></i>
+          <a href="./project.html">Projects</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="main-image">
+      <div class="main-text">
+        <h1>What We Have Learned</h1>
+        <p>Our journey through web development fundamentals</p>
+      </div>
+    </div>
+
+    <div class="intro">
+      <p>Throughout this comprehensive course, we have explored the fundamental principles of web development, from basic HTML structure to advanced CSS techniques and content management systems. Our learning journey has equipped us with the skills needed to create modern, responsive websites.</p>
+    </div>
+
+    <div class="content-block">
+      <div class="text-content">
+        <h2>Foundational Web Development</h2>
+        <ul>
+          <li><b>HTML Structure:</b> Learned to build basic webpage structures using semantic elements, boilerplate, and development tools.</li>
+          <li><b>CSS Fundamentals:</b> Gained proficiency in applying basic styling properties like colors, fonts, sizes, and spacing. Explored how to add CSS to HTML and understood the cascade.</li>
+          <li><b>Responsive Design:</b> Introduced to principles of responsive design using media queries to adapt layouts for various screen sizes.</li>
         </ul>
-      </nav>
-    </header>
-
-    <main>
-      <div class="main-image">
-        <div class="main-text">
-          <h1>What We Have Learned</h1>
-          <p class="main-p">Our journey through web development fundamentals</p>
-        </div>
       </div>
-
-      <div class="intro">
-        <p>Throughout this comprehensive course, we have explored the fundamental principles of web development, from basic HTML structure to advanced CSS techniques and content management systems. Our learning journey has equipped us with the skills needed to create modern, responsive websites.</p>
+      <div class="image-container">
+        <img src="../public/images/foundational_web_dev.png" alt="Foundational Web Development">
       </div>
+    </div>
 
-      <div class="content-block">
-        <div class="text-content">
-          <h2>Foundational Web Development</h2>
-          <ul>
-            <li><b>HTML Structure:</b> Learned to build basic webpage structures using semantic elements, boilerplate, and development tools.</li>
-            <li><b>CSS Fundamentals:</b> Gained proficiency in applying basic styling properties like colors, fonts, sizes, and spacing. Explored how to add CSS to HTML and understood the cascade.</li>
-            <li><b>Responsive Design:</b> Introduced to principles of responsive design using media queries to adapt layouts for various screen sizes.</li>
-          </ul>
-        </div>
-        <div class="image-container">
-          <img src="../public/images/foundational_web_dev.png" alt="Foundational Web Development">
-        </div>
+    <div class="content-block">
+      <div class="text-content">
+        <h2>Advanced CSS Layout Techniques</h2>
+        <ul>
+          <li><b>CSS Display Properties:</b> Deepened understanding of `display` properties, including `block` vs. `inline` elements.</li>
+          <li><b>CSS Box Model:</b> Mastered the concept of the CSS Box Model, crucial for element sizing and spacing.</li>
+          <li><b>Flexbox:</b> Explored Flexbox for efficient and flexible one-dimensional layout design.</li>
+          <li><b>CSS Grid:</b> Learned CSS Grid for powerful two-dimensional layout systems.</li>
+        </ul>
       </div>
-
-      <div class="content-block">
-        <div class="text-content">
-          <h2>Advanced CSS Layout Techniques</h2>
-          <ul>
-            <li><b>CSS Display Properties:</b> Deepened understanding of `display` properties, including `block` vs. `inline` elements.</li>
-            <li><b>CSS Box Model:</b> Mastered the concept of the CSS Box Model, crucial for element sizing and spacing.</li>
-            <li><b>Flexbox:</b> Explored Flexbox for efficient and flexible one-dimensional layout design.</li>
-            <li><b>CSS Grid:</b> Learned CSS Grid for powerful two-dimensional layout systems.</li>
-          </ul>
-        </div>
-        <div class="image-container">
-          <img src="../public/images/advanced_css_layout.png" alt="Advanced CSS Layout Techniques">
-        </div>
+      <div class="image-container">
+        <img src="../public/images/advanced_css_layout.png" alt="Advanced CSS Layout Techniques">
       </div>
+    </div>
 
-      <div class="content-block sub-section">
-        <div class="text-content">
-          <h2>Display & Box Model</h2>
-          <ul>
-            <li><b>CSS Display Properties:</b> Deepened understanding of `display` properties, including `block` vs. `inline` elements.</li>
-            <li><b>CSS Box Model:</b> Mastered the concept of the CSS Box Model, crucial for element sizing and spacing.</li>
-          </ul>
-        </div>
-        <div class="image-container">
-          <img src="../public/images/display_box_model.png" alt="Display & Box Model">
-        </div>
+    <div class="content-block sub-section">
+      <div class="text-content">
+        <h2>Display & Box Model</h2>
+        <ul>
+          <li><b>CSS Display Properties:</b> Deepened understanding of `display` properties, including `block` vs. `inline` elements.</li>
+          <li><b>CSS Box Model:</b> Mastered the concept of the CSS Box Model, crucial for element sizing and spacing.</li>
+        </ul>
       </div>
-
-      <div class="content-block sub-section">
-        <div class="text-content">
-          <h2>Flexbox & Grid</h2>
-          <ul>
-            <li><b>Flexbox:</b> Explored Flexbox for efficient and flexible one-dimensional layout design.</li>
-            <li><b>CSS Grid:</b> Learned CSS Grid for powerful two-dimensional layout systems.</li>
-          </ul>
-        </div>
-        <div class="image-container">
-          <img src="../public/images/flexbox_grid.png" alt="Flexbox & Grid">
-        </div>
+      <div class="image-container">
+        <img src="../public/images/display_box_model.png" alt="Display & Box Model">
       </div>
+    </div>
 
-      <div class="content-block">
-        <div class="text-content">
-          <h2>Content Management Systems (CMS) - WordPress</h2>
-          <ul>
-            <li><b>Introduction to WordPress:</b> Gained foundational knowledge of WordPress as a leading CMS.</li>
-            <li><b>Posts vs. Pages:</b> Understood the fundamental differences and use cases for WordPress posts and pages.</li>
-            <li><b>Full Site Editing vs. Page Editing:</b> Explored modern WordPress editing paradigms, including Full Site Editing and traditional Page Editing.</li>
-            <li><b>Plugins:</b> Learned about the role and management of WordPress plugins to extend site functionality.</li>
-          </ul>
-        </div>
-        <div class="image-container">
-          <img src="../public/images/cms_wordpress.png" alt="CMS WordPress">
-        </div>
+    <div class="content-block sub-section">
+      <div class="text-content">
+        <h2>Flexbox & Grid</h2>
+        <ul>
+          <li><b>Flexbox:</b> Explored Flexbox for efficient and flexible one-dimensional layout design.</li>
+          <li><b>CSS Grid:</b> Learned CSS Grid for powerful two-dimensional layout systems.</li>
+        </ul>
       </div>
-
-      <div class="content-block">
-        <div class="text-content">
-          <h2>Development Workflow & Project Management</h2>
-          <ul>
-            <li><b>Version Control with Git & GitHub:</b> Practiced using Git for version control and collaborating on projects via GitHub (cloning, branching, committing, pushing, pull requests).</li>
-            <li><b>Design Principles:</b> Understood the importance of white space, cognitive load, and visual hierarchy in UI/UX design.</li>
-            <li><b>Project Planning:</b> Engaged in creating website mockups and style guides.</li>
-            <li><b>AI Tools:</b> Introduced to AI image generation tools like ImageFX.</li>
-          </ul>
-        </div>
-        <div class="image-container">
-          <img src="../public/images/dev_workflow_pm.png" alt="Development Workflow">
-        </div>
+      <div class="image-container">
+        <img src="../public/images/flexbox_grid.png" alt="Flexbox & Grid">
       </div>
+    </div>
 
-      <div class="content-block">
-        <div class="text-content">
-          <h2>Practical Application & Assessment</h2>
-          <ul>
-            <li><b>Class Activities & Labs:</b> Applied theoretical knowledge through hands-on HTML and CSS labs, including semantic HTML and advanced CSS layouts.</li>
-            <li><b>Knowledge Tests:</b> Consolidated learning through various knowledge tests covering HTML, CSS, and WordPress.</li>
-            <li><b>Midterm & Final Projects:</b> Prepared for and completed a Midterm Exam and worked towards a comprehensive Final Project, integrating all learned skills.</li>
-          </ul>
-        </div>
-        <div class="image-container">
-          <img src="../public/images/practical_application.png" alt="Practical Application & Assessment">
-        </div>
+    <div class="content-block">
+      <div class="text-content">
+        <h2>Content Management Systems (CMS) - WordPress</h2>
+        <ul>
+          <li><b>Introduction to WordPress:</b> Gained foundational knowledge of WordPress as a leading CMS.</li>
+          <li><b>Posts vs. Pages:</b> Understood the fundamental differences and use cases for WordPress posts and pages.</li>
+          <li><b>Full Site Editing vs. Page Editing:</b> Explored modern WordPress editing paradigms, including Full Site Editing and traditional Page Editing.</li>
+          <li><b>Plugins:</b> Learned about the role and management of WordPress plugins to extend site functionality.</li>
+        </ul>
       </div>
-    </main>
+      <div class="image-container">
+        <img src="../public/images/cms_wordpress.png" alt="CMS WordPress">
+      </div>
+    </div>
 
-    <footer>
-      <p>&copy; 2025 Our Final Project</p>
-    </footer>
-  </body>
+    <div class="content-block">
+      <div class="text-content">
+        <h2>Development Workflow & Project Management</h2>
+        <ul>
+          <li><b>Version Control with Git & GitHub:</b> Practiced using Git for version control and collaborating on projects via GitHub (cloning, branching, committing, pushing, pull requests).</li>
+          <li><b>Design Principles:</b> Understood the importance of white space, cognitive load, and visual hierarchy in UI/UX design.</li>
+          <li><b>Project Planning:</b> Engaged in creating website mockups and style guides.</li>
+          <li><b>AI Tools:</b> Introduced to AI image generation tools like ImageFX.</li>
+        </ul>
+      </div>
+      <div class="image-container">
+        <img src="../public/images/dev_workflow_pm.png" alt="Development Workflow">
+      </div>
+    </div>
+
+    <div class="content-block">
+      <div class="text-content">
+        <h2>Practical Application & Assessment</h2>
+        <ul>
+          <li><b>Class Activities & Labs:</b> Applied theoretical knowledge through hands-on HTML and CSS labs, including semantic HTML and advanced CSS layouts.</li>
+          <li><b>Knowledge Tests:</b> Consolidated learning through various knowledge tests covering HTML, CSS, and WordPress.</li>
+          <li><b>Midterm & Final Projects:</b> Prepared for and completed a Midterm Exam and worked towards a comprehensive Final Project, integrating all learned skills.</li>
+        </ul>
+      </div>
+      <div class="image-container">
+        <img src="../public/images/practical_application.png" alt="Practical Application & Assessment">
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Our Final Project</p>
+  </footer>
+</body>
 </html>

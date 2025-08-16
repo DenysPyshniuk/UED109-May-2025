@@ -1,3 +1,4 @@
+/* Hero Section */
 .main-image {
   background-image: url('../public/images/home/Our Class.png');
   background-repeat: no-repeat;
@@ -55,6 +56,7 @@
   margin: 0;
 }
 
+/* Team Section */
 .team-title {
   text-align: center;
   font-size: clamp(1.75rem, 4vw, 2.5rem);
@@ -110,23 +112,14 @@
   margin: 0;
 }
 
-/* Enhanced Responsive Design */
+/* Responsive Design */
 @media (max-width: 1400px) {
-  .team-grid {
-    max-width: 1100px;
-    gap: 2rem;
-  }
+  .team-grid { max-width: 1100px; gap: 2rem; }
 }
 
 @media (max-width: 1200px) {
-  .team-grid {
-    max-width: 1000px;
-    gap: 1.5rem;
-  }
-
-  .main-image {
-    height: clamp(180px, 35vw, 350px);
-  }
+  .team-grid { max-width: 1000px; gap: 1.5rem; }
+  .main-image { height: clamp(180px, 35vw, 350px); }
 }
 
 @media (max-width: 900px) {
@@ -136,161 +129,46 @@
     padding: 0 1.5rem;
   }
 
-  .member1-photo {
-    width: clamp(120px, 20vw, 200px);
-    height: clamp(120px, 20vw, 200px);
-  }
-
-  .main-image {
-    height: clamp(160px, 30vw, 300px);
-  }
-
-  .intro {
-    margin-bottom: 2rem;
-    padding: 1.5rem;
-  }
-
-  .team-title {
-    margin-bottom: 2rem;
-  }
+  .member1-photo { width: clamp(120px, 20vw, 200px); height: clamp(120px, 20vw, 200px); }
+  .main-image { height: clamp(160px, 30vw, 300px); }
+  .intro { margin-bottom: 2rem; padding: 1.5rem; }
+  .team-title { margin-bottom: 2rem; }
 }
 
 @media (max-width: 768px) {
-  .team-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-    padding: 0 1rem;
-  }
-
-  .member1-photo {
-    width: clamp(100px, 18vw, 180px);
-    height: clamp(100px, 18vw, 180px);
-  }
-
-  .main-image {
-    height: clamp(140px, 25vw, 250px);
-    border-radius: 8px;
-  }
-
-  .main-text {
-    padding: 1rem;
-    border-radius: 8px;
-  }
-
-  .intro {
-    margin-bottom: 1.5rem;
-    padding: 1rem;
-    border-radius: 8px;
-  }
-
-  .team-title {
-    margin-bottom: 1.5rem;
-    font-size: 2rem;
-  }
-
-  .team-member {
-    padding: 1.5rem;
-  }
+  .team-grid { grid-template-columns: 1fr; gap: 1.5rem; padding: 0 1rem; }
+  .member1-photo { width: clamp(100px, 18vw, 180px); height: clamp(100px, 18vw, 180px); }
+  .main-image { height: clamp(140px, 25vw, 250px); border-radius: 8px; }
+  .main-text { padding: 1rem; border-radius: 8px; }
+  .intro { margin-bottom: 1.5rem; padding: 1rem; border-radius: 8px; }
+  .team-title { margin-bottom: 1.5rem; font-size: 2rem; }
+  .team-member { padding: 1.5rem; }
 }
 
 @media (max-width: 600px) {
-  .team-grid {
-    gap: 1rem;
-    padding: 0 0.75rem;
-  }
-
-  .member1-photo {
-    width: clamp(80px, 15vw, 150px);
-    height: clamp(80px, 15vw, 150px);
-  }
-
-  .main-image {
-    height: clamp(120px, 20vw, 200px);
-  }
-
-  .main-text {
-    padding: 0.75rem;
-  }
-
-  .main-text h1 {
-    font-size: clamp(1.5rem, 6vw, 2rem);
-    margin-bottom: 0.5rem;
-  }
-
-  .main-text p {
-    font-size: clamp(0.9rem, 3vw, 1rem);
-  }
-
-  .intro {
-    padding: 0.75rem;
-    margin-bottom: 1rem;
-  }
-
-  .intro p {
-    font-size: 0.95rem;
-    line-height: 1.6;
-  }
-
-  .team-title {
-    font-size: 1.75rem;
-    margin-bottom: 1rem;
-  }
-
-  .team-member {
-    padding: 1rem;
-  }
-
-  .member-info {
-    font-size: 1rem;
-  }
+  .team-grid { gap: 1rem; padding: 0 0.75rem; }
+  .member1-photo { width: clamp(80px, 15vw, 150px); height: clamp(80px, 15vw, 150px); }
+  .main-image { height: clamp(120px, 20vw, 200px); }
+  .main-text { padding: 0.75rem; }
+  .main-text h1 { font-size: clamp(1.5rem, 6vw, 2rem); margin-bottom: 0.5rem; }
+  .main-text p { font-size: clamp(0.9rem, 3vw, 1rem); }
+  .intro { padding: 0.75rem; margin-bottom: 1rem; }
+  .intro p { font-size: 0.95rem; line-height: 1.6; }
+  .team-title { font-size: 1.75rem; margin-bottom: 1rem; }
+  .team-member { padding: 1rem; }
+  .member-info { font-size: 1rem; }
 }
 
 @media (max-width: 480px) {
-  .team-grid {
-    gap: 0.75rem;
-    padding: 0 0.5rem;
-  }
-
-  .member1-photo {
-    width: 70px;
-    height: 70px;
-  }
-
-  .main-image {
-    height: 100px;
-  }
-
-  .main-text {
-    padding: 0.5rem;
-  }
-
-  .main-text h1 {
-    font-size: 1.25rem;
-  }
-
-  .main-text p {
-    font-size: 0.85rem;
-  }
-
-  .intro {
-    padding: 0.5rem;
-    margin-bottom: 0.75rem;
-  }
-
-  .intro p {
-    font-size: 0.9rem;
-  }
-
-  .team-title {
-    font-size: 1.5rem;
-    margin-bottom: 0.75rem;
-  }
-
-  .team-member {
-    padding: 0.75rem;
-  }
-
-  .member-info {
-    font-size: 0.9rem;
-  }
+  .team-grid { gap: 0.75rem; padding: 0 0.5rem; }
+  .member1-photo { width: 70px; height: 70px; }
+  .main-image { height: 100px; }
+  .main-text { padding: 0.5rem; }
+  .main-text h1 { font-size: 1.25rem; }
+  .main-text p { font-size: 0.85rem; }
+  .intro { padding: 0.5rem; margin-bottom: 0.75rem; }
+  .intro p { font-size: 0.9rem; }
+  .team-title { font-size: 1.5rem; margin-bottom: 0.75rem; }
+  .team-member { padding: 0.75rem; }
+  .member-info { font-size: 0.9rem; }
 }

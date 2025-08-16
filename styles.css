@@ -1,53 +1,33 @@
-/*Reset css*/
-html {
-  box-sizing: border-box;
-  font-size: 16px;
-}
+/* Reset CSS */
 *,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ol,
-ul {
+*::before,
+*::after {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-weight: normal;
-}
-li {
-  list-style-type: none;
-}
-a {
-  text-decoration: none;
-}
-img {
-  max-width: 100%;
-  height: auto;
 }
 
-/******** common *******/
+body,
+h1, h2, h3, h4, h5, h6, p, ol, ul {
+  font-weight: normal;
+}
+
+li { list-style: none; }
+a { text-decoration: none; }
+img { max-width: 100%; height: auto; }
+
+/* Base Styles */
 body {
-  margin: 0px;
   scroll-behavior: smooth;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  font-family: Effra, Verdana, Arial sans-serif;
+  font-family: Effra, Verdana, Arial, sans-serif;
   line-height: 1.6;
 }
 
-/* CSS-only Header Toggle System */
-.header-toggle-checkbox {
-  display: none;
-}
+/* Header Toggle System */
+.header-toggle-checkbox { display: none; }
 
 .header-toggle {
   display: none;
@@ -74,22 +54,7 @@ body {
   line-height: 1;
 }
 
-/* CSS-only Header Toggle using focus-within */
-.header-toggle:focus + .header {
-  transform: translateY(0) !important;
-  opacity: 1 !important;
-  pointer-events: all !important;
-}
-
-.header-toggle:focus {
-  background: #a90412;
-}
-
-.header-toggle:focus::before {
-  content: "✕";
-}
-
-/* header */
+/* Header */
 .header {
   background: #000;
   min-height: 100px;
@@ -103,54 +68,7 @@ body {
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* Mobile Header Hide/Show Functionality */
-@media (max-width: 768px) {
-  .header-toggle {
-    display: flex;
-  }
-
-  .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    transform: translateY(-100%);
-    opacity: 0;
-    pointer-events: none;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-  }
-
-  /* Pure CSS Toggle System - This should take precedence */
-  /* Hide header when checkbox is unchecked (default state) */
-  .header-toggle-checkbox:not(:checked) ~ .header {
-    transform: translateY(-100%);
-    opacity: 0;
-    pointer-events: none;
-  }
-
-  /* Show header when toggle is checked */
-  .header-toggle-checkbox:checked ~ .header {
-    transform: translateY(0);
-    opacity: 1;
-    pointer-events: all;
-  }
-
-  /* When toggle is checked, change button icon */
-  .header-toggle-checkbox:checked ~ .header-toggle::before {
-    content: "✕";
-  }
-
-  /* When toggle is checked, change button color */
-  .header-toggle-checkbox:checked ~ .header-toggle {
-    background: #a90412;
-  }
-
-  /* Add padding to body to account for fixed header */
-  body {
-    padding-top: 0;
-  }
-}
-
+/* Navigation */
 .nav-list {
   display: flex;
   justify-content: center;
@@ -173,18 +91,6 @@ body {
   transition: all 0.3s ease;
 }
 
-.nav-list li:hover i {
-  color: #e3051a;
-  cursor: pointer;
-  transform: translateX(2px);
-}
-
-.nav-list li:hover a {
-  color: #e3051a;
-  text-decoration: underline;
-  cursor: pointer;
-}
-
 .nav-list li i {
   color: #fff;
   font-size: 0.8em;
@@ -199,14 +105,16 @@ body {
   white-space: nowrap;
 }
 
-/* Styles for the active navigation link */
+.nav-list li:hover i,
+.nav-list li.active i {
+  color: #e3051a;
+  transform: translateX(2px);
+}
+
+.nav-list li:hover a,
 .nav-list li.active a {
   color: #e3051a;
   text-decoration: underline;
-}
-
-.nav-list li.active i {
-  color: #e3051a;
 }
 
 #logo {
@@ -223,6 +131,7 @@ body {
   padding: 2px;
 }
 
+/* Main Content */
 main {
   width: 90%;
   max-width: 1400px;
@@ -234,7 +143,6 @@ main {
   flex: 1 0 auto;
 }
 
-/* Container to center content at 80% width */
 .container {
   max-width: 90%;
   margin: 0 auto;
@@ -244,7 +152,7 @@ main {
   gap: 2rem;
 }
 
-/* Styles for the new sections and articles */
+/* Content Sections */
 .content-section {
   padding: 2rem 0;
   display: flex;
@@ -267,7 +175,7 @@ main {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Style the Call-to-Action (CTA) buttons */
+/* Buttons */
 .cta-button {
   display: inline-block;
   background-color: #e3051a;
@@ -287,7 +195,7 @@ main {
   box-shadow: 0 4px 8px rgba(227, 5, 26, 0.3);
 }
 
-/* footer */
+/* Footer */
 footer {
   width: 100%;
   min-height: 100px;
@@ -301,13 +209,9 @@ footer {
   padding: 1rem 0;
 }
 
-footer p {
-  margin: 0;
-  padding: 0;
-}
+footer p { margin: 0; }
 
-/******** toppage *******/
-/* Hero Section Styles */
+/* Hero Section */
 .main-image {
   background-image: url(./public/images/home/ccbt-banner-1.webp);
   background-repeat: no-repeat;
@@ -365,16 +269,7 @@ footer p {
   margin: 0;
 }
 
-/* common */
-.content-section h3 {
-  font-size: clamp(1.5rem, 2.5vw, 2rem);
-  color: #56255c;
-  margin-bottom: 1rem;
-}
-
-
-
-/* contents */
+/* Typography */
 h2 {
   padding-bottom: 8px;
   font-size: clamp(1.75rem, 3vw, 2rem);
@@ -384,7 +279,7 @@ h2 {
   margin-bottom: 2rem;
 }
 
-h2:after {
+h2::after {
   content: "";
   display: block;
   width: clamp(80px, 20vw, 160px);
@@ -394,6 +289,12 @@ h2:after {
   border-radius: 2px;
 }
 
+.content-section h3 {
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  color: #56255c;
+  margin-bottom: 1rem;
+}
+
 .about {
   margin-bottom: clamp(3rem, 8vw, 6rem);
   background: #f1eef1;
@@ -401,7 +302,7 @@ h2:after {
   padding: 2rem;
 }
 
-/* contents */
+/* Content Grid */
 .contents ul {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -471,29 +372,50 @@ h2:after {
   transform: translateX(3px);
 }
 
-/* Enhanced Responsive Design */
-@media (max-width: 1400px) {
-  main {
-    width: 95%;
-    padding: 1.5rem;
+/* Mobile Header Toggle */
+@media (max-width: 768px) {
+  .header-toggle { display: flex; }
+
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
   }
-  .container {
-    max-width: 95%;
+
+  .header-toggle-checkbox:not(:checked) ~ .header {
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .header-toggle-checkbox:checked ~ .header {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .header-toggle-checkbox:checked ~ .header-toggle::before {
+    content: "✕";
+  }
+
+  .header-toggle-checkbox:checked ~ .header-toggle {
+    background: #a90412;
   }
 }
 
+/* Responsive Design */
+@media (max-width: 1400px) {
+  main { width: 95%; padding: 1.5rem; }
+  .container { max-width: 95%; }
+}
+
 @media (max-width: 1200px) {
-  main {
-    width: 95%;
-    padding: 1.5rem;
-  }
-  .container {
-    max-width: 95%;
-    gap: 1.5rem;
-  }
-  .nav-list {
-    gap: 2rem;
-  }
+  .nav-list { gap: 2rem; }
+  .container { gap: 1.5rem; }
 }
 
 @media (max-width: 900px) {
@@ -502,24 +424,17 @@ h2:after {
     padding: 1rem;
     margin: 1rem auto;
   }
+
   .container {
     flex-direction: column;
     align-items: center;
     gap: 1.5rem;
     max-width: 100%;
   }
-  .project-article {
-    flex-basis: 100%;
-    width: 100%;
-  }
-  .header {
-    min-height: 120px;
-    padding: 0.5rem 0;
-  }
-  .nav-list {
-    gap: 1.5rem;
-    padding: 0 1rem;
-  }
+
+  .project-article { flex-basis: 100%; width: 100%; }
+  .header { min-height: 120px; padding: 0.5rem 0; }
+  .nav-list { gap: 1.5rem; padding: 0 1rem; }
   .contents ul {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.5rem;
@@ -527,30 +442,24 @@ h2:after {
 }
 
 @media (max-width: 768px) {
-  .header {
-    min-height: auto;
-    padding: 1rem 0;
-  }
+  .header { min-height: auto; padding: 1rem 0; }
+
   .nav-list {
     flex-direction: column;
     gap: 1rem;
     padding: 1rem 0;
   }
+
   .nav-list li {
     gap: 0.5rem;
     font-size: 0.9em;
     height: auto;
     padding: 0.5rem 0;
   }
-  .nav-list li a {
-    text-align: center;
-    padding: 0.5rem 0;
-  }
-  #logo {
-    width: 2.5rem;
-    height: 2.5rem;
-    margin: 0.5rem 0;
-  }
+
+  .nav-list li a { text-align: center; padding: 0.5rem 0; }
+  #logo { width: 2.5rem; height: 2.5rem; margin: 0.5rem 0; }
+
   main {
     width: 100%;
     padding: 1rem;
@@ -558,90 +467,38 @@ h2:after {
     box-shadow: none;
     margin: 0;
   }
-  .container {
-    max-width: 100%;
-    padding: 0 1rem;
-  }
-  .contents ul {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-  .contents li {
-    padding: 1rem;
-  }
+
+  .container { max-width: 100%; padding: 0 1rem; }
+  .contents ul { grid-template-columns: 1fr; gap: 1rem; }
+  .contents li { padding: 1rem; }
 }
 
 @media (max-width: 600px) {
-  .header {
-    min-height: auto;
-    padding: 0.5rem 0;
-  }
-  .nav-list {
-    gap: 0.75rem;
-    padding: 0.5rem 0;
-  }
-  .nav-list li {
-    font-size: 0.85em;
-    padding: 0.25rem 0;
-  }
-  #logo {
-    width: 2rem;
-    height: 2rem;
-  }
-  main {
-    padding: 0.75rem;
-  }
-  h1 {
-    font-size: clamp(1.5rem, 6vw, 2rem);
-    margin-bottom: 1rem;
-  }
-  h2 {
-    font-size: clamp(1.25rem, 4vw, 1.5rem);
-  }
-  p {
-    font-size: clamp(0.9rem, 3vw, 1rem);
-    line-height: 1.6;
-  }
-  footer {
-    min-height: 80px;
-    font-size: 0.9rem;
-    padding: 0.75rem 0;
-  }
-  .cta-button {
-    padding: 0.6rem 1rem;
-    font-size: 0.9em;
-  }
-  .container {
-    padding: 0 0.75rem;
-  }
-  .project-article {
-    padding: 1.5rem;
-  }
-  .contents li {
-    padding: 0.75rem;
-  }
-  .contents li img {
-    height: 150px;
-  }
+  .header { min-height: auto; padding: 0.5rem 0; }
+
+  .nav-list { gap: 0.75rem; padding: 0.5rem 0; }
+  .nav-list li { font-size: 0.85em; padding: 0.25rem 0; }
+  #logo { width: 2rem; height: 2rem; }
+
+  main { padding: 0.75rem; }
+
+  h1 { font-size: clamp(1.5rem, 6vw, 2rem); margin-bottom: 1rem; }
+  h2 { font-size: clamp(1.25rem, 4vw, 1.5rem); }
+  p { font-size: clamp(0.9rem, 3vw, 1rem); line-height: 1.6; }
+
+  footer { min-height: 80px; font-size: 0.9rem; padding: 0.75rem 0; }
+  .cta-button { padding: 0.6rem 1rem; font-size: 0.9em; }
+  .container { padding: 0 0.75rem; }
+  .project-article { padding: 1.5rem; }
+  .contents li { padding: 0.75rem; }
+  .contents li img { height: 150px; }
 }
 
 @media (max-width: 480px) {
-  .nav-list li {
-    font-size: 0.8em;
-  }
-  .nav-list {
-    gap: 0.5rem;
-  }
-  main {
-    padding: 0.5rem;
-  }
-  .project-article {
-    padding: 1rem;
-  }
-  .contents li {
-    padding: 0.5rem;
-  }
-  .contents li img {
-    height: 120px;
-  }
+  .nav-list li { font-size: 0.8em; }
+  .nav-list { gap: 0.5rem; }
+  main { padding: 0.5rem; }
+  .project-article { padding: 1rem; }
+  .contents li { padding: 0.5rem; }
+  .contents li img { height: 120px; }
 }
