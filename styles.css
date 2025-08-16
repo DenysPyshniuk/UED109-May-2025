@@ -41,15 +41,114 @@ body {
   display: flex;
   flex-direction: column;
   font-family: Effra, Verdana, Arial sans-serif;
+  line-height: 1.6;
+}
+
+/* CSS-only Header Toggle System */
+.header-toggle-checkbox {
+  display: none;
+}
+
+.header-toggle {
+  display: none;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #56255c;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1001;
+  transition: all 0.3s ease;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-toggle::before {
+  content: "☰";
+  font-size: 1.5rem;
+  color: white;
+  display: block;
+  line-height: 1;
+}
+
+/* CSS-only Header Toggle using focus-within */
+.header-toggle:focus + .header {
+  transform: translateY(0) !important;
+  opacity: 1 !important;
+  pointer-events: all !important;
+}
+
+.header-toggle:focus {
+  background: #a90412;
+}
+
+.header-toggle:focus::before {
+  content: "✕";
 }
 
 /* header */
 .header {
   background: #000;
-  height: 100px;
+  min-height: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Mobile Header Hide/Show Functionality */
+@media (max-width: 768px) {
+  .header-toggle {
+    display: flex;
+  }
+
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  /* Pure CSS Toggle System - This should take precedence */
+  /* Hide header when checkbox is unchecked (default state) */
+  .header-toggle-checkbox:not(:checked) ~ .header {
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  /* Show header when toggle is checked */
+  .header-toggle-checkbox:checked ~ .header {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  /* When toggle is checked, change button icon */
+  .header-toggle-checkbox:checked ~ .header-toggle::before {
+    content: "✕";
+  }
+
+  /* When toggle is checked, change button color */
+  .header-toggle-checkbox:checked ~ .header-toggle {
+    background: #a90412;
+  }
+
+  /* Add padding to body to account for fixed header */
+  body {
+    padding-top: 0;
+  }
 }
 
 .nav-list {
@@ -57,65 +156,76 @@ body {
   justify-content: center;
   align-items: center;
   list-style: none;
-  gap: 3rem;  /* Increased gap between nav items */
+  gap: 3rem;
   margin: 0;
   padding: 0;
   width: 100%;
-  max-width: 1200px; /* Prevent too wide spacing on large screens */
+  max-width: 1200px;
+  flex-wrap: wrap;
 }
 
 .nav-list li {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem; /* Increased gap between icon and text */
+  gap: 0.5rem;
   height: 40px;
+  transition: all 0.3s ease;
 }
+
 .nav-list li:hover i {
   color: #e3051a;
   cursor: pointer;
+  transform: translateX(2px);
 }
+
 .nav-list li:hover a {
   color: #e3051a;
   text-decoration: underline;
   cursor: pointer;
 }
+
 .nav-list li i {
   color: #fff;
   font-size: 0.8em;
-  transition: color 0.2s;
+  transition: all 0.3s ease;
 }
+
 .nav-list li a {
   color: #fff;
   text-decoration: none;
-  transition: color 0.2s;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  white-space: nowrap;
 }
 
 /* Styles for the active navigation link */
 .nav-list li.active a {
-  color: #e3051a; /* Your brand's red color for the active link text */
-  text-decoration: underline; /* Add an underline to make it stand out more */
+  color: #e3051a;
+  text-decoration: underline;
 }
-/* Also change the icon color */
+
 .nav-list li.active i {
   color: #e3051a;
 }
+
 #logo {
   width: 32px;
   height: 32px;
-  transition: filter 0.2s;
-  flex-shrink: 0; /* Prevent logo from shrinking */
+  transition: all 0.3s ease;
+  flex-shrink: 0;
 }
 
-/* Make the logo red on hover of its parent link or li */
 .nav-list li:hover #logo,
 .nav-list li.active #logo {
-  size: 32px;
-  background-color: #e3051a; /* Your preferred red color */
+  background-color: #e3051a;
+  border-radius: 4px;
+  padding: 2px;
 }
 
 main {
-  width: 80%;
+  width: 90%;
+  max-width: 1400px;
   margin: 2rem auto;
   padding: 2rem;
   background: #fff;
@@ -126,60 +236,69 @@ main {
 
 /* Container to center content at 80% width */
 .container {
-  max-width: 80%;
-  margin: 0 auto; /* This centers the container horizontally */
+  max-width: 90%;
+  margin: 0 auto;
   display: flex;
-  flex-wrap: wrap; /* Allows articles to wrap to a new line */
-  justify-content: space-around; /* Distributes articles evenly */
+  flex-wrap: wrap;
+  justify-content: space-around;
   gap: 2rem;
 }
 
 /* Styles for the new sections and articles */
 .content-section {
-  padding: 2rem 0; /* Add some vertical spacing */
+  padding: 2rem 0;
   display: flex;
-  flex-direction: column; /* Stacks articles vertically on smaller screens */
+  flex-direction: column;
   gap: 2rem;
 }
 
 .project-article {
-  flex-basis: calc(50% - 1rem); /* Each article takes up about half the space */
+  flex-basis: calc(50% - 1rem);
   padding: 2rem;
   background: #f4f4f4;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-article:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 /* Style the Call-to-Action (CTA) buttons */
 .cta-button {
-  display: inline-block; /* Makes it a block-level element that respects padding/margin */
-  background-color: #e3051a; /* Your preferred red color */
-  color: #fff; /* White text for contrast */
-  text-decoration: none; /* Removes underline from the link */
+  display: inline-block;
+  background-color: #e3051a;
+  color: #fff;
+  text-decoration: none;
   padding: 0.8rem 1.5rem;
-  border-radius: 50px; /* Makes the corners perfectly rounded */
-  transition: background-color 0.3s ease; /* Adds a smooth transition for hover effect */
+  border-radius: 50px;
+  transition: all 0.3s ease;
   margin-top: 1rem;
   font-weight: 500;
+  border: 2px solid transparent;
 }
 
 .cta-button:hover {
-  background-color: #a90412; /* Darker red on hover */
+  background-color: #a90412;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(227, 5, 26, 0.3);
 }
 
 /* footer */
 footer {
   width: 100%;
-  height: 100px; /* Fixed height */
+  min-height: 100px;
   background: #000;
   color: #fff;
   text-align: center;
-  text-decoration: solid;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  padding: 1rem 0;
 }
 
 footer p {
@@ -188,84 +307,192 @@ footer p {
 }
 
 /******** toppage *******/
-/* common */
-.content-section h3 {
-  font-size: 24px;
-  color: #56255c;
-}
-/* hero */
-.top .hero {
-  padding: 12rem 0;
-  text-align: center;
+/* Hero Section Styles */
+.main-image {
   background-image: url(./public/images/home/ccbt-banner-1.webp);
+  background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
+  height: clamp(200px, 40vw, 400px);
+  position: relative;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-.top .hero h1 {
-  font-size: 72px;
-  color: #fff;
-  font-weight: bold;
+.main-text {
+  text-align: center;
+  padding: clamp(1rem, 3vw, 2rem);
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(3px);
+  border-radius: 12px;
 }
-.top .hero p {
-  color: #fff;
+
+.main-text h1 {
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  margin-bottom: clamp(0.5rem, 2vw, 1rem);
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
+
+.main-text p {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  line-height: 1.6;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.intro {
+  color: black;
+  padding: clamp(2rem, 5vw, 4rem) clamp(1rem, 3vw, 2rem);
+  text-align: center;
+  max-width: clamp(300px, 90vw, 800px);
+  margin: 0 auto 3rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.intro p {
+  font-size: clamp(1rem, 2.5vw, 1.1rem);
+  line-height: 1.7;
+  color: #444;
+  margin: 0;
+}
+
+/* common */
+.content-section h3 {
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  color: #56255c;
+  margin-bottom: 1rem;
+}
+
+
+
 /* contents */
 h2 {
   padding-bottom: 8px;
-  font-size: 2rem;
+  font-size: clamp(1.75rem, 3vw, 2rem);
   font-weight: bold;
   color: #56255c;
   text-align: center;
+  margin-bottom: 2rem;
 }
+
 h2:after {
   content: "";
   display: block;
-  width: 160px;
+  width: clamp(80px, 20vw, 160px);
   margin: 0 auto;
   background-color: #56255c;
-  height: 8px;
+  height: clamp(4px, 1vw, 8px);
+  border-radius: 2px;
 }
+
 .about {
-  margin-bottom: 96px;
+  margin-bottom: clamp(3rem, 8vw, 6rem);
   background: #f1eef1;
+  border-radius: 12px;
+  padding: 2rem;
 }
 
 /* contents */
 .contents ul {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
   justify-content: center;
+  padding: 0;
 }
+
 .contents li {
-  width: 364px;
-  margin: 0 24px 48px 0;
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
 }
+
+.contents li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.contents li img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.contents li h3 {
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  color: #56255c;
+  margin-bottom: 1rem;
+}
+
+.contents li p {
+  flex: 1;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
 .contents li div {
   text-align: right;
+  margin-top: auto;
 }
+
 .contents li div i {
   margin-right: 8px;
   color: #e3051a;
+  transition: transform 0.3s ease;
 }
+
 .contents li div a {
   color: #e3051a;
+  font-weight: 500;
+  transition: all 0.3s ease;
 }
+
 .contents li a:hover {
   color: #a90412;
-  transition: color 0.2s;
   text-decoration: underline;
 }
 
-/* Responsive Design */
-/* Responsive Design */
-@media (max-width: 1200px) {
+.contents li div:hover i {
+  transform: translateX(3px);
+}
+
+/* Enhanced Responsive Design */
+@media (max-width: 1400px) {
   main {
-    width: 90%;
+    width: 95%;
+    padding: 1.5rem;
   }
   .container {
-    max-width: 90%;
+    max-width: 95%;
+  }
+}
+
+@media (max-width: 1200px) {
+  main {
+    width: 95%;
+    padding: 1.5rem;
+  }
+  .container {
+    max-width: 95%;
+    gap: 1.5rem;
+  }
+  .nav-list {
+    gap: 2rem;
   }
 }
 
@@ -279,26 +506,29 @@ h2:after {
     flex-direction: column;
     align-items: center;
     gap: 1.5rem;
+    max-width: 100%;
   }
   .project-article {
     flex-basis: 100%;
     width: 100%;
   }
   .header {
-    height: 120px;
-  }
-  footer {
-    height: 120px;
+    min-height: 120px;
+    padding: 0.5rem 0;
   }
   .nav-list {
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+  .contents ul {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.5rem;
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .header {
-    height: auto;
-    min-height: 300px;
+    min-height: auto;
     padding: 1rem 0;
   }
   .nav-list {
@@ -308,8 +538,9 @@ h2:after {
   }
   .nav-list li {
     gap: 0.5rem;
-    font-size: 0.85em;
+    font-size: 0.9em;
     height: auto;
+    padding: 0.5rem 0;
   }
   .nav-list li a {
     text-align: center;
@@ -327,27 +558,90 @@ h2:after {
     box-shadow: none;
     margin: 0;
   }
+  .container {
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+  .contents ul {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .contents li {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    min-height: auto;
+    padding: 0.5rem 0;
+  }
+  .nav-list {
+    gap: 0.75rem;
+    padding: 0.5rem 0;
+  }
+  .nav-list li {
+    font-size: 0.85em;
+    padding: 0.25rem 0;
+  }
+  #logo {
+    width: 2rem;
+    height: 2rem;
+  }
+  main {
+    padding: 0.75rem;
+  }
   h1 {
-    font-size: 1.8rem;
+    font-size: clamp(1.5rem, 6vw, 2rem);
     margin-bottom: 1rem;
   }
   h2 {
-    font-size: 1.5rem;
+    font-size: clamp(1.25rem, 4vw, 1.5rem);
   }
   p {
-    font-size: 1rem;
+    font-size: clamp(0.9rem, 3vw, 1rem);
     line-height: 1.6;
   }
   footer {
-    height: 100px;
+    min-height: 80px;
     font-size: 0.9rem;
+    padding: 0.75rem 0;
   }
   .cta-button {
     padding: 0.6rem 1rem;
     font-size: 0.9em;
   }
   .container {
-    max-width: 100%;
-    padding: 0 1rem;
+    padding: 0 0.75rem;
+  }
+  .project-article {
+    padding: 1.5rem;
+  }
+  .contents li {
+    padding: 0.75rem;
+  }
+  .contents li img {
+    height: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-list li {
+    font-size: 0.8em;
+  }
+  .nav-list {
+    gap: 0.5rem;
+  }
+  main {
+    padding: 0.5rem;
+  }
+  .project-article {
+    padding: 1rem;
+  }
+  .contents li {
+    padding: 0.5rem;
+  }
+  .contents li img {
+    height: 120px;
   }
 }

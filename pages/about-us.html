@@ -14,6 +14,8 @@
 </head>
 
 <body>
+  <input type="checkbox" id="headerToggle" class="header-toggle-checkbox">
+  <label for="headerToggle" class="header-toggle" aria-label="Toggle header"></label>
   <header id="header" class="header">
     <nav id="nav">
       <ul class="nav-list">
@@ -40,24 +42,26 @@
         </li>
         <li>
           <i class="fa-solid fa-chevron-right"></i>
-          <a href="../pages/project.html">Project</a>
+          <a href="../pages/project.html">Projects</a>
         </li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <div class="hero-image">
-      <h1 id="About-us-title">Our College</h1>
-      <section class="hero">
+    <div class="main-image">
+      <div class="main-text">
+        <h1>About Us</h1>
+        <p class="main-p">Discover our college and the opportunities we offer</p>
+      </div>
     </div>
-    <div class="hero-content">
-      <p>Embrace the opportunity to study IT, hospitality and business and gain work experience in Vancouver at CCTB
-      </p>
+
+    <div class="intro">
+      <p>Embrace the opportunity to study IT, hospitality and business and gain work experience in Vancouver at CCTB. At the Canadian College of Technology and Business (CCTB), your success is our goal. Through our range of IT, hospitality and business-focused programs, we provide our students with the highest quality training, preparing them for a rewarding career in an increasingly digitalized world.</p>
     </div>
     <section>
       <div class="breadcrumb">
-        <span class="icon"><i class="fa-solid fa-house"></i>/ about Us</span>
+        <span class="icon"><i class="fa-solid fa-house"></i> / About Us</span>
       </div>
 
       <section class="about-video">
@@ -90,9 +94,10 @@
             </div>
 
             <button class="accordion">Community Contribution</button>
-            <di class="panel">
+            <div class="panel">
+            </div>
+          </section>
         </div>
-
 
         <section class="form-section">
           <h2>Fill out the form below and we will be in touch shortly</h2>
@@ -119,8 +124,7 @@
               </div>
             </div>
 
-
-            <form class="privacy-form">
+            <div class="privacy-form">
               <p>
                 Canadian College of Technology and Business is a part of the Global University Systems group of
                 companies (the GUS Group).
@@ -152,23 +156,11 @@
               <p>You can unsubscribe at any time using links provided in any communication we send.</p>
 
               <button type="submit">Submit</button>
-            </form>
-
-
+            </div>
           </form>
-
-
-
         </section>
-
-
       </section>
-
     </section>
-
-
-
-
   </main>
 
   <footer>
