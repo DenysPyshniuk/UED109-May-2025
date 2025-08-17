@@ -26,6 +26,14 @@ body {
   line-height: 1.6;
 }
 
+main {
+  flex: 1;
+  width: 90%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: clamp(1rem, 3vw, 2rem);
+}
+
 /* Header Toggle System */
 .header-toggle-checkbox { display: none; }
 
@@ -133,14 +141,9 @@ body {
 
 /* Main Content */
 main {
-  width: 90%;
-  max-width: 1400px;
-  margin: 2rem auto;
-  padding: 2rem;
   background: #fff;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  flex: 1 0 auto;
 }
 
 .container {
@@ -419,11 +422,7 @@ h2::after {
 }
 
 @media (max-width: 900px) {
-  main {
-    width: 95%;
-    padding: 1rem;
-    margin: 1rem auto;
-  }
+  main { width: 95%; padding: 1rem; }
 
   .container {
     flex-direction: column;
@@ -465,7 +464,6 @@ h2::after {
     padding: 1rem;
     border-radius: 0;
     box-shadow: none;
-    margin: 0;
   }
 
   .container { max-width: 100%; padding: 0 1rem; }
